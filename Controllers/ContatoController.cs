@@ -56,6 +56,7 @@ namespace projeto_MVC.Controllers
             var contatoBanco = _context.Contatos.Find(contato.Id);
             contatoBanco.Nome = contato.Nome;
             contatoBanco.Telefone = contato.Telefone;
+            contatoBanco.Email = contato.Email;
             contatoBanco.Ativo = contato.Ativo;
 
             _context.Update(contatoBanco);

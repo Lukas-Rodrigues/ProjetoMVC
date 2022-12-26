@@ -11,8 +11,8 @@ using projeto_MVC.Context;
 namespace projetoMVC.Migrations
 {
     [DbContext(typeof(AgendaContext))]
-    [Migration("20221219021327_AdicionaTabelaContato")]
-    partial class AdicionaTabelaContato
+    [Migration("20221226224358_CriacaoTabelaContatos")]
+    partial class CriacaoTabelaContatos
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,6 +34,9 @@ namespace projetoMVC.Migrations
 
                     b.Property<bool>("Ativo")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
